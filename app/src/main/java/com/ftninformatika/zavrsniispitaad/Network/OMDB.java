@@ -6,6 +6,8 @@ import com.ftninformatika.zavrsniispitaad.Model.Movie;
 
 import java.util.Map;
 
+import retrofit2.http.GET;
+
 public interface OMDB {
 
     @GET("/")

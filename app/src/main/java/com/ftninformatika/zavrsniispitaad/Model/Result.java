@@ -13,7 +13,7 @@ public class Result {
     @SerializedName ("totalResult")
     @Expose
     private String totalResult;
-    @SerializedName
+    @SerializedName("response")
     @Expose
     private String response;
 

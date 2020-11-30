@@ -1,5 +1,8 @@
 package com.ftninformatika.zavrsniispitaad.Network;
 
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class RESTservice {
 
     public static final String BASE_URL = "https://www.omdbapi.com";
@@ -15,8 +18,8 @@ public class RESTservice {
         return retrofit;
     }
 
-    public static OMDBApiEndpointInterface apiInterface(){
-        OMDBApiEndpointInterface apiService = getRetrofitInstance().create(OMDBApiEndpointInterface.class);
+    public static OMDB apiInterface(){
+        OMDB apiService = getRetrofitInstance().create(OMDB.class);
 
         return apiService;
     }
