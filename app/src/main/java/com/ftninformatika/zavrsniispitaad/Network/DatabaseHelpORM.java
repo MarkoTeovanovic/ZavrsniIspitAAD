@@ -69,5 +69,18 @@ public class DatabaseHelpORM extends OrmLiteSqliteOpenHelper {
         }
 
     }
+    public Dao<Movie, String> getMovieDao() throws SQLException {
+        if (movieDao == null) {
+            movieDao = getDao(Movie.class);
+        }
+
+        return movieDao;
+    }
+
+    @Override
+    public void close() {
+        movieDao = null;
+        super.close();
+    }
 }
 
